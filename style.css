@@ -1,0 +1,256 @@
+/* ── 陽明社歡迎詞 共用樣式 ── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans TC', 'Noto Sans JP', 'Inter', sans-serif;
+  background: #f5f0eb;
+  color: #2c2420;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── 語言切換列 ── */
+.lang-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(26,58,92,0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.lang-bar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(232,212,139,0.7);
+  border: 1px solid rgba(232,212,139,0.2);
+  transition: all 0.25s ease;
+}
+
+.lang-bar a:hover {
+  color: #e8d48b;
+  border-color: rgba(232,212,139,0.5);
+  background: rgba(232,212,139,0.08);
+}
+
+.lang-bar a.active {
+  color: #1a3a5c;
+  background: #e8d48b;
+  border-color: #e8d48b;
+  font-weight: 600;
+}
+
+.lang-bar a .flag { font-size: 16px; }
+
+/* ── 頁面容器 ── */
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fffcf8;
+  min-height: 100vh;
+  padding-top: 52px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.08);
+}
+
+/* ── 頂部橫幅 ── */
+.header-band {
+  width: 100%;
+  padding: 36px 24px 28px;
+  background: linear-gradient(135deg, #1a3a5c 0%, #234e78 40%, #1a3a5c 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-band::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #c9a84c 20%, #e8d48b 50%, #c9a84c 80%, transparent 100%);
+}
+
+.header-band h1 {
+  font-family: 'Noto Serif TC', 'Noto Serif JP', 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #e8d48b;
+  letter-spacing: 5px;
+  margin-bottom: 4px;
+}
+
+.header-band .sub {
+  font-size: 12px;
+  color: rgba(232,212,139,0.6);
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+/* ── 扶輪齒輪裝飾 ── */
+.rotary-deco {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+}
+
+.rotary-deco svg { width: 100%; height: 100%; }
+
+/* ── 標題區 ── */
+.title-block {
+  text-align: center;
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+
+.title-block .speaker {
+  font-family: 'Noto Serif TC', 'Noto Serif JP', 'Playfair Display', serif;
+  font-size: 14px;
+  color: #8b7355;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+
+.title-block .speech-title {
+  font-family: 'Noto Serif TC', 'Noto Serif JP', 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #1a3a5c;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.motto {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 18px;
+  background: linear-gradient(135deg, rgba(26,58,92,0.06), rgba(201,168,76,0.08));
+  border-radius: 20px;
+  font-family: 'Noto Serif TC', 'Noto Serif JP', 'Playfair Display', serif;
+  font-size: 13px;
+  color: #c9a84c;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/* ── 正文 ── */
+.content {
+  padding: 24px 28px 20px;
+  position: relative;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent 0%, #c9a84c 15%, #c9a84c 85%, transparent 100%);
+  opacity: 0.2;
+}
+
+.body-text {
+  font-size: 15px;
+  line-height: 1.95;
+  text-align: justify;
+  color: #3a3330;
+}
+
+.body-text p {
+  margin-bottom: 16px;
+  text-indent: 2em;
+}
+
+.body-text p:last-child { margin-bottom: 0; }
+
+.body-text .highlight {
+  color: #1a3a5c;
+  font-weight: 600;
+}
+
+.body-text .gold {
+  color: #9a7d3a;
+  font-weight: 600;
+}
+
+.body-text .heart {
+  display: block;
+  margin: 20px 0;
+  padding: 14px 18px;
+  background: rgba(201,168,76,0.04);
+  border-left: 3px solid rgba(201,168,76,0.3);
+  text-indent: 0;
+  font-size: 14.5px;
+  color: #5a4a3a;
+  line-height: 2;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ── 簽名 ── */
+.signature {
+  margin-top: 28px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.signature .name {
+  font-family: 'Noto Serif TC', 'Noto Serif JP', 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a3a5c;
+  letter-spacing: 2px;
+}
+
+.signature .role {
+  font-size: 12px;
+  color: #8b7355;
+  margin-top: 3px;
+  letter-spacing: 1px;
+}
+
+/* ── 底部 ── */
+.footer-band {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #1a3a5c, #234e78);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-band .footer-text {
+  font-size: 10px;
+  color: rgba(232,212,139,0.5);
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+/* ── RWD ── */
+@media (max-width: 480px) {
+  .header-band h1 { font-size: 20px; letter-spacing: 3px; }
+  .title-block .speech-title { font-size: 17px; }
+  .content { padding: 20px 20px 16px; }
+  .content::before { left: 8px; }
+  .body-text { font-size: 14.5px; }
+  .lang-bar a { padding: 5px 12px; font-size: 12px; }
+}
