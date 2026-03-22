@@ -138,7 +138,7 @@ body {
   font-weight: 700;
   color: #1a3a5c;
   letter-spacing: 2px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .motto {
@@ -249,7 +249,10 @@ body {
 /* ── RWD ── */
 @media (max-width: 480px) {
   .header-band h1 { font-size: 15px; letter-spacing: 1px; white-space: nowrap; }
-  .title-block .speech-title { font-size: 17px; }
+  .title-block { padding: 24px 20px 18px; }
+  .title-block .speaker { font-size: 13px; letter-spacing: 1px; }
+  .title-block .speech-title { font-size: 15px; letter-spacing: 1px; line-height: 1.7; }
+  .motto { font-size: 12px; letter-spacing: 2px; padding: 4px 14px; }
   .content { padding: 20px 20px 16px; }
   .content::before { left: 8px; }
   .body-text { font-size: 14.5px; }
