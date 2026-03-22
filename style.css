@@ -139,6 +139,7 @@ body {
   color: #1a3a5c;
   letter-spacing: 2px;
   line-height: 1.6;
+  word-break: keep-all;
 }
 
 .motto {
@@ -248,10 +249,10 @@ body {
 
 /* ── RWD ── */
 @media (max-width: 480px) {
-  .header-band h1 { font-size: 13px; letter-spacing: 1px; white-space: nowrap; }
+  .header-band h1 { font-size: 13px; letter-spacing: 0; white-space: nowrap; }
   .title-block { padding: 24px 20px 18px; }
-  .title-block .speaker { font-size: 13px; letter-spacing: 1px; }
-  .title-block .speech-title { font-size: 14px; letter-spacing: 0.5px; line-height: 1.7; }
+  .title-block .speaker { font-size: 12px; letter-spacing: 0.5px; }
+  .title-block .speech-title { font-size: 14px; letter-spacing: 0; line-height: 1.7; }
   .motto { font-size: 12px; letter-spacing: 2px; padding: 4px 14px; }
   .content { padding: 20px 20px 16px; }
   .content::before { left: 8px; }
