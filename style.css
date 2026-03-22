@@ -249,7 +249,7 @@ body {
 
 /* ── RWD ── */
 @media (max-width: 480px) {
-  .header-band h1 { font-size: 13px; letter-spacing: 0; white-space: nowrap; }
+  .header-band h1 { font-size: 16px; letter-spacing: -0.3px; }
   .title-block { padding: 24px 20px 18px; }
   .title-block .speaker { font-size: 12px; letter-spacing: 0.5px; }
   .title-block .speech-title { font-size: 14px; letter-spacing: 0; line-height: 1.7; }
