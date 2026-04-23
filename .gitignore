@@ -12,3 +12,5 @@ Desktop.ini
 *.tmp
 *.bak
 speech_text.txt
+
+.server-identity.json
